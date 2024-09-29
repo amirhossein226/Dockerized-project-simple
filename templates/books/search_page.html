@@ -1,0 +1,23 @@
+{% extends '_base.html' %}
+
+{% block title %}Result{% endblock title %}
+
+{% block content %}
+
+<h4>Search Results:</h4>
+<hr>
+{% for book in book_list %}
+<p>{{ book.title }}</p>
+<ul>
+    <li>Author: {{ book.author }}</li>
+    <li>Price: {{ book.price }}</li>
+</ul>
+<br>
+{% empty %}
+<p>There is No result for this search</p>
+{% endfor %}
+<div>
+
+</div>
+
+{% endblock content %}
